@@ -15,13 +15,49 @@
   <link rel="stylesheet" href="http://www.slidesjs.com/css/font-awesome.min.css">
   <link rel="stylesheet" href="http://www.slidesjs.com/css/style.css">
   <!-- End CSS -->
+  <style>
+    /* Prevents slides from flashing */
+    #slides {
+      display:none;
+    }
+
+    .site-container {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+  </style>
 </head>
 <body>
-
+  <div class="site-container">
+    <div id="slides">
+      <img src="http://placehold.it/940x528">
+      <img src="http://placehold.it/940x528">
+      <img src="http://placehold.it/940x528">
+      <img src="http://placehold.it/940x528">
+      <img src="http://placehold.it/940x528">
+    </div>
+  </div>
   <!-- Start main content -->
-
+  
 
   <!-- SlidesJS Required: Link to jQuery -->
   <script src="resources/jquery-1.9.1.min.js"></script>
+  <script src="jquery.slides.min.js"></script>
+  <script>
+    $(function(){
+      $("#slides").slidesjs({
+        width: 700,
+        height: 393,
+        effect: {
+          slide: {
+            // Slide effect settings.
+            speed: 200
+              // [number] Speed in milliseconds of the slide animation.
+          }
+        }
+      });
+    });
+
+  </script>
 
 </body></html>
